@@ -26,6 +26,7 @@ import { TaskList } from './task-list/entities/task-list.entity';
         entities: [Task, TaskList],
         synchronize: true,
         logging: true,
+        ssl: true,
       }),
     }),
     TaskModule,
