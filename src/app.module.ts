@@ -26,7 +26,9 @@ import { TaskList } from './task-list/entities/task-list.entity';
         entities: [Task, TaskList],
         synchronize: true,
         logging: true,
-        ssl: true,
+        ssl: {
+          rejectUnauthorized: false, // Ignore self-signed certificate errors
+        },
       }),
     }),
     TaskModule,
